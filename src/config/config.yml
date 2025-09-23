@@ -1,0 +1,19 @@
+redis:
+  host: "10.1.130.103"
+  db: 0
+  password:
+  port: 30937
+
+drissionpage:
+  user_data_path: "D:/rpaIry/chrome/userdata"
+  download_path: "D:/rpaIry/chrome/download"
+
+common:
+  download_path: "D:/rpaIry/download"
+  log_path: "D:/rpaIry/log"
+  cache_download_path: "D:/rpaIry/cache/download"
+  cache_log_path: "D:/rpaIry/cache/log"
+
+ym:
+  desc: "云码"
+  token: "Elmyb8Ihw7US6w_LbpF8m2uPvNT6HTo6egeKXHkUw4k"

@@ -1,0 +1,14 @@
+[
+  {
+    "port": 9520,
+    "username": "18127902005",
+    "password": "FDWL123456",
+    "account_url": "https://agent.e.kuaishou.com/data-analysis/account-analysis?__staffId__=2047262"
+  },
+  {
+    "port": 9521,
+    "username": "18127902005",
+    "password": "FDWL123456",
+    "account_url": "https://agent.e.kuaishou.com/data-analysis/account-analysis?__staffId__=1001029303"
+  }
+]
