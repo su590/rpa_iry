@@ -4,7 +4,7 @@ import logging
 import requests
 import json
 
-def get_ks_cost(session: requests.Session) -> float:
+def get_ks_cost(session: requests.Session, refer_url: str) -> float:
   url = "https://agent.e.kuaishou.com/rest/dsp/agent/account/data/v2/queryDataReport"
 
   payload = json.dumps({
@@ -47,7 +47,7 @@ def get_ks_cost(session: requests.Session) -> float:
     'origin': 'https://agent.e.kuaishou.com',
     'pragma': 'no-cache',
     'priority': 'u=1, i',
-    'referer': 'https://agent.e.kuaishou.com/data-analysis/account-analysis?__staffId__=2047262',
+    'referer': f'{refer_url}',
     'sec-ch-ua': '"Chromium";v="140", "Not=A?Brand";v="24", "Microsoft Edge";v="140"',
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-platform': '"Windows"',
