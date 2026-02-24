@@ -76,7 +76,7 @@ def _get_jlyq_account() -> JlyqAccount:
 
 def main():
     # 拿一下ts和crm的数据
-    ts_crm_page = get_page(9500)
+    ts_crm_page = get_page(9523)
     ts_field, ts_df = TsIry(ts_crm_page, get_cookie()).main()  # 接口获取cookie
     crm_df = CrmIry(ts_crm_page).main()
     ts_crm_page.close()
@@ -103,7 +103,7 @@ def main():
 
     # 发送消息
     _send_sms(datetime.now(), qc_cost, ks_cost, ts_field)
-
+    logging.info(f'当前时段数据：千川消耗: {qc_cost}，快手消耗：{ks_cost}, ts数据：{ts_field}')
     # 发送文件
     chat_id = 'oc_65fd8c5ddac0889afcb6dc20203e944d'
     file_path = os.path.join(os.path.dirname(__file__), 'iry.xlsx')

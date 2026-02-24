@@ -8,8 +8,8 @@ from pandas import DataFrame
 
 
 class LoginInfo:
-    username = 'IT-develop'
-    password = 'FDAI123456'
+    username = '广告-金永成'
+    password = 'guanggao123'
 
 
 class Website:
