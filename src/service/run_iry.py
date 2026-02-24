@@ -124,4 +124,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    # 拿一下巨量引擎的数据
+    jlyq_account = _get_jlyq_account()
+    with JlyqSession(jlyq_account.port, jlyq_account.username, jlyq_account.password) as session:
+        qc_cost = get_cost(session)
