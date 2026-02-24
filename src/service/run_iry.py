@@ -4,7 +4,6 @@ from datetime import datetime
 import logging
 import pandas as pd
 import requests
-from DrissionPage import ChromiumPage
 
 from src.service import KsAccount, PATH, JlyqAccount
 from src.service.utils import send_feishu_file
@@ -94,13 +93,13 @@ def main():
                    ks_account_zero.username,
                    ks_account_zero.password,
                    ks_account_zero.account_url) as session:
-        ks_cost += get_ks_cost(session)
+        ks_cost += get_ks_cost(session, ks_account_zero.account_url)
     ks_account_one = _get_ks_account(1)
     with KsSession(ks_account_one.port,
                    ks_account_one.username,
                    ks_account_one.password,
                    ks_account_one.account_url) as session:
-        ks_cost += get_ks_cost(session)
+        ks_cost += get_ks_cost(session, ks_account_one.account_url)
 
     # 发送消息
     _send_sms(datetime.now(), qc_cost, ks_cost, ts_field)

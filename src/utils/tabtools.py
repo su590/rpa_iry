@@ -119,8 +119,9 @@ class EasyTab:
         y_scope //= 2
 
         # ---- offset 补偿（保留你的逻辑）----
-        x_scope = self.size(ele)[0]
-        offset -= (x_scope + 20)
+        # 很奇怪 这边过来之后就不需要补偿了
+        # x_scope = self.size(ele)[0]
+        # offset -= (x_scope + 20)
 
         duration = max(1.5, duration)
         start = self.point(ele)
